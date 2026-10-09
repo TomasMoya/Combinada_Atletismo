@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planilla de competicion</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<p class="back-link"><a href="index.html">&larr; Inicio</a></p>
+
+<div class="sheet-header">
+  <div class="sheet-title">
+    <span>PLANILLA DE COMPETICION</span>
+    <input type="text" id="org-input" class="org-input" value="ASOCIACION ATLETICA DEL VALLE">
+  </div>
+
+  <label class="meta-row meta-torneo">
+    <span class="meta-label">TORNEO:</span>
+    <input type="text" id="torneo-input" placeholder="Nombre del torneo">
+  </label>
+
+  <div class="meta-row meta-grid">
+    <label class="meta-field meta-prueba">
+      <span class="meta-label">PRUEBA:</span>
+      <select id="discipline"></select>
+    </label>
+    <label class="meta-field meta-cat">
+      <span class="meta-label">CAT:</span>
+      <select id="category"></select>
+    </label>
+    <label class="meta-field meta-sexo">
+      <span class="meta-label">SEXO:</span>
+      <select id="sexo-select">
+        <option value="F">FEMENINO</option>
+        <option value="M">MASCULINO</option>
+      </select>
+    </label>
+  </div>
+</div>
+
+<form id="add-athlete-form">
+  <input type="text" name="name" placeholder="Nombre del atleta" required>
+  <input type="text" name="club" placeholder="Institucion">
+  <button type="submit">Agregar atleta</button>
+  <button type="button" id="sort-btn">Ordenar</button>
+  <button type="button" id="export-btn">Exportar a Excel</button>
+</form>
+
+<p class="hint">
+  Los puntos se recalculan al confirmar cada marca. El orden y el puesto no cambian
+  solos: apretar "Ordenar" para ver el ranking actualizado.
+</p>
+
+<div id="results-container">
+  <div class="table-wrap">
+    <table id="athletes-table">
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="cards-wrap" id="cards-wrap"></div>
+</div>
+
+<script src="js/vendor/exceljs.min.js"></script>
+<script src="js/coefficients.js"></script>
+<script src="js/data-promocional-u10-u12.js"></script>
+<script src="js/data-u14.js"></script>
+<script src="js/data-iaaf-adult.js"></script>
+<script src="js/scoring.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

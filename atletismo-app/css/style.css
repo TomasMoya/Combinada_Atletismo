@@ -1,0 +1,243 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 16px;
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+.back-link { margin: 0 0 8px; font-size: 0.85em; }
+.back-link a { color: #555; }
+
+/* ===== Cabecera tipo planilla de papel ===== */
+.sheet-header {
+  border: 2px solid #222;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.sheet-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-bottom: 2px solid #222;
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+}
+.sheet-title span { font-size: 0.95em; }
+.org-input {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  min-width: 180px;
+  flex: 1 1 auto;
+}
+.org-input:focus { outline: 1px solid #999; background: #fffbe0; }
+
+.meta-row { display: block; border-bottom: 1px solid #222; }
+.meta-row:last-child { border-bottom: none; }
+
+.meta-torneo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+}
+.meta-torneo input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 0.95em;
+  padding: 2px 4px;
+}
+.meta-torneo input:focus { outline: 1px solid #999; background: #fffbe0; }
+
+.meta-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.meta-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-right: 1px solid #222;
+  flex: 1 1 auto;
+}
+.meta-field:last-child { border-right: none; }
+.meta-label {
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.meta-field select {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 0.9em;
+  background: #fff;
+}
+.meta-value { font-weight: 700; }
+
+/* ===== Alta de atletas ===== */
+#add-athlete-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.hint {
+  color: #666;
+  font-size: 0.8em;
+  margin: 0 0 14px;
+}
+
+/* ===== Tabla (desktop) ===== */
+.table-wrap { overflow-x: auto; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.82em;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 4px 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+thead th {
+  background: #eef0e8;
+  font-weight: 700;
+}
+
+th.pje-head, td.pje-cell {
+  background: #ffe9a8;
+}
+
+td.mm-cell { background: #fff6df; font-weight: 600; }
+
+td.total-cell {
+  background: #c9e6c9;
+  font-weight: 700;
+}
+td.puesto-cell { font-weight: 700; }
+
+.mark-cell input, .attempt-cell input {
+  width: 56px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 2px 3px;
+  text-align: center;
+  font-size: 1em;
+}
+.attempt-cell input { width: 44px; }
+
+.mark-cell input:disabled { background: #f5f5f5; }
+
+.manual-toggle {
+  display: block;
+  font-size: 0.75em;
+  color: #888;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+.manual-toggle input { width: auto; vertical-align: middle; }
+
+.remove-btn {
+  border: 1px solid #c66;
+  background: #fff0f0;
+  color: #a33;
+  border-radius: 3px;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+/* ===== Tarjetas (mobile) ===== */
+.cards-wrap { display: none; }
+
+.athlete-card {
+  border: 2px solid #222;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #eef0e8;
+  border-bottom: 1px solid #222;
+}
+.card-name { font-weight: 700; flex: 1; }
+.card-club { color: #555; font-size: 0.9em; }
+
+.card-event {
+  padding: 8px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.card-event:last-of-type { border-bottom: none; }
+.card-event-label {
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.card-attempts-row { display: flex; gap: 6px; margin-bottom: 4px; }
+.card-attempts-row input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 4px;
+  text-align: center;
+  font-size: 1em;
+}
+.card-event-info { font-size: 0.85em; color: #555; }
+
+.card-single-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.card-single-row input {
+  flex: 1;
+  min-width: 90px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 6px;
+  text-align: center;
+  font-size: 1em;
+}
+.card-pts { font-weight: 700; color: #7a5a00; white-space: nowrap; }
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #f4f4ee;
+  font-weight: 700;
+}
+
+/* Breakpoint: en pantallas chicas (celulares de los arbitros) se muestran
+   tarjetas apiladas en vez de la tabla ancha, para no requerir scroll
+   horizontal con una fila por atleta. */
+@media (max-width: 760px) {
+  body { margin: 10px; }
+  .table-wrap { display: none; }
+  .cards-wrap { display: block; }
+  .meta-field { flex: 1 1 100%; border-right: none; border-bottom: 1px solid #ddd; }
+  .meta-field:last-child { border-bottom: none; }
+}

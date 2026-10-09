@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selector de categorias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+
+<!-- ===== Mobile (< 900px) ===== -->
+<div id="mobile-view" class="view-mobile">
+  <div class="canvas-m">
+    <div class="track-layer" id="track-layer-m">
+      <svg viewBox="0 0 390 844" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="hazeM" cx="50%" cy="54%" r="60%">
+            <stop offset="0%" stop-color="#2b3a22" stop-opacity=".85"></stop>
+            <stop offset="100%" stop-color="#0b0d0a" stop-opacity="0"></stop>
+          </radialGradient>
+        </defs>
+        <rect x="0" y="210" width="390" height="634" fill="url(#hazeM)"></rect>
+        <g stroke="#f1ece1" stroke-width="2.6" transform="translate(0,-20)">
+          <ellipse cx="195" cy="1000" rx="912" ry="684" fill="#c1523a"></ellipse>
+          <ellipse cx="195" cy="1000" rx="847" ry="635" fill="#b8462c"></ellipse>
+          <ellipse cx="195" cy="1000" rx="780" ry="585" fill="#c1523a"></ellipse>
+          <ellipse cx="195" cy="1000" rx="701" ry="526" fill="#b8462c"></ellipse>
+          <ellipse cx="195" cy="1000" rx="612" ry="459" fill="#c1523a"></ellipse>
+          <ellipse cx="195" cy="1000" rx="515" ry="386" fill="#b8462c"></ellipse>
+          <ellipse cx="195" cy="1000" rx="406" ry="305" fill="#c1523a"></ellipse>
+          <ellipse cx="195" cy="1000" rx="306" ry="230" fill="#1f2c1d" stroke-width="3.4"></ellipse>
+        </g>
+      </svg>
+    </div>
+
+    <div class="header-m" id="header-m">
+      <div class="kicker">Planilla de combinadas</div>
+      <h1 class="title-m">Selecciona<br>la categoria</h1>
+      <div class="rule-m"></div>
+    </div>
+
+    <div class="pills-layer" id="pills-m"></div>
+
+    <div class="footer-m" id="footer-m">
+      <span class="footer-hint">Toca una categoria para abrir su planilla.</span>
+      <span class="footer-count" id="footer-count-m"></span>
+    </div>
+
+    <div class="scrim" id="scrim-m" hidden></div>
+    <div class="sheet" id="sheet-m" hidden>
+      <div class="sheet-top">
+        <div class="sheet-cat">
+          <span class="sheet-cat-kicker">Categoria</span>
+          <span class="sheet-cat-label" id="sheet-cat-label-m"></span>
+        </div>
+        <button type="button" class="btn-cambiar" id="btn-cambiar-m">Cambiar</button>
+      </div>
+      <div class="sheet-title">Elegi el sexo</div>
+      <div class="gender-grid">
+        <a class="gender-link" id="link-f-m" href="#"><span>FEMENINO</span><span class="gender-sub">VER PLANILLA</span></a>
+        <a class="gender-link" id="link-m-m" href="#"><span>MASCULINO</span><span class="gender-sub">VER PLANILLA</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Desktop (>= 900px) ===== -->
+<div id="desktop-view" class="view-desktop" hidden>
+  <div class="canvas-outer-d" id="canvas-outer-d">
+    <div class="canvas-scale-d" id="canvas-scale-d">
+      <div class="canvas-d">
+        <div class="track-layer" id="track-layer-d">
+          <svg viewBox="0 0 1440 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <radialGradient id="hazeD" cx="70%" cy="60%" r="60%">
+                <stop offset="0%" stop-color="#2b3a22" stop-opacity=".8"></stop>
+                <stop offset="100%" stop-color="#0b0d0a" stop-opacity="0"></stop>
+              </radialGradient>
+            </defs>
+            <rect x="0" y="0" width="1440" height="900" fill="url(#hazeD)"></rect>
+            <g stroke="#f1ece1" stroke-width="3">
+              <ellipse cx="1000" cy="1250" rx="1459" ry="1094" fill="#c1523a"></ellipse>
+              <ellipse cx="1000" cy="1250" rx="1355" ry="1016" fill="#b8462c"></ellipse>
+              <ellipse cx="1000" cy="1250" rx="1248" ry="936" fill="#c1523a"></ellipse>
+              <ellipse cx="1000" cy="1250" rx="1122" ry="841" fill="#b8462c"></ellipse>
+              <ellipse cx="1000" cy="1250" rx="979" ry="734" fill="#c1523a"></ellipse>
+              <ellipse cx="1000" cy="1250" rx="824" ry="618" fill="#b8462c"></ellipse>
+              <ellipse cx="1000" cy="1250" rx="650" ry="487" fill="#c1523a"></ellipse>
+              <ellipse cx="1000" cy="1250" rx="490" ry="367" fill="#1f2c1d" stroke-width="4"></ellipse>
+            </g>
+          </svg>
+        </div>
+
+        <div class="veil-d"></div>
+
+        <div class="pills-layer" id="pills-d"></div>
+
+        <div class="left-panel-d">
+          <div class="panel-title-d" id="panel-title-d">
+            <div class="kicker">Planilla de combinadas</div>
+            <h1 class="title-d">Selecciona<br>la categoria</h1>
+            <div class="rule-d"></div>
+            <p class="lead-d">Elegi un carril para abrir la planilla de esa categoria.</p>
+          </div>
+
+          <div class="panel-sel-d" id="panel-sel-d" hidden>
+            <button type="button" class="btn-volver" id="btn-volver-d">&larr; Cambiar categoria</button>
+            <div class="kicker">Categoria</div>
+            <div class="sel-label-d" id="sel-label-d"></div>
+            <div class="sel-title-d">Elegi el sexo</div>
+            <div class="gender-grid gender-grid-d">
+              <a class="gender-link gender-link-d" id="link-f-d" href="#"><span>FEMENINO</span><span class="gender-sub">VER PLANILLA</span></a>
+              <a class="gender-link gender-link-d" id="link-m-d" href="#"><span>MASCULINO</span><span class="gender-sub">VER PLANILLA</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/inicio.js"></script>
+</body>
+</html>
